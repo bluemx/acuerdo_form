@@ -1,0 +1,17 @@
+/* Incluir Tailwind desde CDN */
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+
+.dfgradient{
+  background: linear-gradient(to bottom, #FCC600, #EF8E33, #E86432, #E95364);
+}
+
+
+.optionimage{
+  mask-image: url(img/opshape.svg);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}

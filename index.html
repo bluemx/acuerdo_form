@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acuerdo Familiar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app/app.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dfgray: '#706F6E',
+            dfpink:'#FC007A',
+            dforange: '#EB7233',
+            dfblue: '#00AAE9',
+            dfyellow: '#fcc503',
+            dfpurple: '#824e98',
+            dfpinkdark: '#C4216B',
+            dforangedark: '#EA5847',
+
+
+          },
+          fontFamily: {
+            sans: ['Nunito Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-transparent h-full">
+
+  
+  <div id="app" class="p-1 md:p-5 h-full">
+    <div class="bg-white bg-[url(app/img/bg.png)] bg-left-bottom bg-no-repeat shadow-md p-1 md:p-5 h-full rounded-xl overflow-y-auto relative">
+      <!-- loading -->
+      <div v-if="loading" class="fixed inset-0 flex justify-center items-center z-50 bg-white/60 rounded-xl backdrop-blur-sm font-bold text-dfblue gap-1">
+        <span class="animate-pulse text-2xl">Recibiendo datos</span>
+        <span class="animate-bounce text-4xl">...</span>
+
+      </div>
+      <!-- content -->
+      <template v-for="(item, index) in acuerdodata">
+        <acuerdo-comp :data="item" :options="acuerdooptions" @clicked="clicked" :userdata="userdata"></acuerdo-comp>
+      </template> 
+   </div>
+
+  </div>
+
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="app/acuerdodata.js"></script>
+  <script src="app/app.js"></script>
+
+
+</body>
+</html>
