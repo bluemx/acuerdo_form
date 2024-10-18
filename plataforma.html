@@ -96,6 +96,31 @@ function loadData(event) {
                 </div>
             </div>
 
+            <!-- CARGAR TEMPLATE -->
+            <div class="bg-white rounded text-xs p-5 h-1/2">
+                <div>Cargar template <span class="font-bold">state: 'template', id: 'A2024SG' | 'A2024SI' | 'A2024SPA' | 'A2024SA'</span></div>
+               
+                <div class="mt-1">
+                    <pre class="rounded leading-3 text-[10px] mt-2"><code class="language-javascript">
+function loadData(event) {
+    setTimeout(()=>{
+        const message = {
+            state: 'template',
+            id: 'A2024SG'
+        };
+        let iframe = document.getElementById("iframewindow")
+        iframe.contentWindow.postMessage(message, '*');
+    }, 500)
+}
+                    </code></pre>
+                </div>
+                <div class="flex justify-end ">
+                    <div @click="sendDataTemplate" class="cursor-pointer text-white bg-dfblue text-xs p-1 rounded-b">
+                        <div>Cargar template</div>
+                    </div>
+                </div>
+            </div>
+
 
         
 
@@ -122,6 +147,14 @@ const app = Vue.createApp({
         const message = {
             state: 'load',
             data: JSON.stringify(this.dataToSend)
+        }
+        let iframe = document.getElementById("iframewindow")
+        iframe.contentWindow.postMessage(message, '*');
+    },
+    sendDataTemplate() {
+        const message = {
+            state: 'template',
+            id: 'A2024SG'
         }
         let iframe = document.getElementById("iframewindow")
         iframe.contentWindow.postMessage(message, '*');
