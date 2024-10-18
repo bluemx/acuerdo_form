@@ -7,6 +7,14 @@ body {
 .dfgradient{
   background: linear-gradient(to bottom, #FCC600, #EF8E33, #E86432, #E95364);
 }
+.dfgradienthover:hover{
+  background: linear-gradient(to right, #2B82CC, #51C9F3);
+
+}
+
+.dfgradientgray{
+  background: linear-gradient(to bottom, #706F6E, #3b3b3a);
+}
 
 
 .optionimage{
@@ -14,4 +22,16 @@ body {
   mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;
+}
+
+.simplebar-scrollbar{
+}
+.simplebar-scrollbar::before {
+  border-radius: 8px 0 0 8px;
+  right: 0;
+  left:50%;
+  background: linear-gradient(to bottom, #FCC600, #EF8E33, #E86432, #E95364);
+}
+.simplebar-scrollbar.simplebar-visible:before{
+  opacity: 1;
 }

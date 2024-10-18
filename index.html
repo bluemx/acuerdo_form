@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="es" class="h-full">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Acuerdo Familiar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app/app.css">
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    
+    <link rel="stylesheet" href="app/app.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             dfgray: '#706F6E',
-            dfpink:'#FC007A',
+            dfpink: '#FC007A',
             dforange: '#EB7233',
             dfblue: '#00AAE9',
             dfyellow: '#fcc503',
             dfpurple: '#824e98',
             dfpinkdark: '#C4216B',
-            dforangedark: '#EA5847',
-
-
+            dforangedark: '#EA5847'
           },
           fontFamily: {
             sans: ['Nunito Sans', 'sans-serif'],
@@ -33,25 +38,76 @@
       }
     }
   </script>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
 </head>
+
 <body class="bg-transparent h-full">
 
-  
+
   <div id="app" class="p-1 md:p-5 h-full">
-    <div class="bg-white bg-[url(app/img/bg.png)] bg-left-bottom bg-no-repeat shadow-md p-1 md:p-5 h-full rounded-xl overflow-y-auto relative">
+    <main
+      class="bg-white bg-[url(app/img/bg.png)] bg-left-bottom bg-no-repeat shadow-md p-1 md:p-5 h-full rounded-xl overflow-y-auto relative w-full overflow-x-hidden">
       <!-- loading -->
-      <div v-if="loading" class="fixed inset-0 flex justify-center items-center z-50 bg-white/60 rounded-xl backdrop-blur-sm font-bold text-dfblue gap-1">
+      <div v-if="loading"
+        class="fixed inset-0 flex justify-center items-center z-50 bg-white/60 rounded-xl backdrop-blur-sm font-bold text-dfblue gap-1">
         <span class="animate-pulse text-2xl">Recibiendo datos</span>
         <span class="animate-bounce text-4xl">...</span>
 
       </div>
-      <!-- content -->
+      <!-- CONTENT -->
       <template v-for="(item, index) in acuerdodata">
-        <acuerdo-comp :data="item" :options="acuerdooptions" @clicked="clicked" :userdata="userdata"></acuerdo-comp>
-      </template> 
-   </div>
+        <Transition mode="out-in"
+        enter-active-class="duration-300 delay-100 ease-out"
+        enter-from-class="transform opacity-0 translate-x-full"
+        enter-to-class="opacity-100"
+        leave-active-class="duration-100 ease-in "
+        leave-from-class="opacity-100"
+        leave-to-class="transform opacity-0 -translate-x-full	">
+          <acuerdo-comp v-if="item.id == navigation" :data="item" :options="acuerdooptions" @clicked="clicked" :userdata="userdata"></acuerdo-comp>
+        </Transition>
+      </template>
+
+      <!-- NAV -->
+      <navi-comp v-if="navigation<16" :navigation="navigation" :total="acuerdodata.length" @navigate="navigate" ></navi-comp>
+
+      <!--ENDING-->
+      <div v-if="navigation==16">
+        <div class="text-center p-2">
+          <div>Te presentamos tu</div>
+          <img src="app/img/acuerdo-familiar.svg" class="mx-auto max-w-xl">
+        </div>
+        <div class="flex flex-col gap-2 p-2">
+          <!--acuerdodata.sort((a, b) => a.dimension.localeCompare(b.dimension))-->
+          <div v-for="(item, index) in acuerdodata" class="rounded-xl bg-white p-1 shadow border-2 border-dforange">
+            <div><div class="bg-dforange text-white p-1 rounded-t-lg text-sm  text-center font-bold">{{item.dimension}}</div></div>
+            <div class="text-sm rounded-b bg-gray-100 text-center p-1 opacity-50">{{item.texto}}</div>
+            <div v-for="(sec, sindex) in item.secundarios" class="p-2">
+              <div class="text-dfgray font-bold">{{sec.texto}}</div>
+              <div class="grid grid-cols-2 gap-2">
+                <div v-for="(opc, oindex) in getSecondaryOptionsChecked(item.id, sec.id)" class=" p-1 rounded-xl bg-white border-[1px] flex items-center gap-1">
+                  <div class="w-1/3 rounded-lg overflow-hidden"><img :src="imgname(item.id, opc.id)" class="w-full"></div>
+                  <div class="text-sm">{{opc.texto}}</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NAV ENDING -->
+        <div  class="text-center mx-auto m-5 max-w-xl flex gap-2 justify-center items-center" >
+          <div class="rounded-lg  p-2  font-bold cursor-pointer border-4 transition-all bg-gray-200 hover:bg-dfblue hover:text-white text-dfgray active:scale-110" @click="navigation=15">Regresar y modificar</div>
+          <div class="rounded-lg  p-2  font-bold cursor-pointer border-4 transition-all dfgradient dfgradienthover text-white active:scale-110" @click="endAcuerdoFamiliar">FINALIZAR Y GENERAR ACUERDO</div>
+        </div>
+      </div>
+
+    </main>
 
   </div>
+
 
   <script src="https://unpkg.com/vue@3"></script>
   <script src="app/acuerdodata.js"></script>
@@ -59,4 +115,5 @@
 
 
 </body>
+
 </html>
