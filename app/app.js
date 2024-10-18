@@ -137,7 +137,9 @@ const app = Vue.createApp({
         A2024SI: "{\"navigation\":15,\"userdata\":{\"1\":{\"check\":true},\"2\":{\"check\":true},\"3\":{\"check\":true},\"4\":{\"check\":true},\"5\":{\"check\":true},\"6\":{\"check\":true},\"7\":{\"check\":true},\"8\":{\"check\":false},\"9\":{\"check\":false},\"10\":{\"check\":false},\"11\":{\"check\":true},\"12\":{\"check\":false},\"13\":{\"check\":false},\"14\":{\"check\":true},\"15\":{\"check\":true},\"16\":{\"check\":false},\"17\":{\"check\":false},\"18\":{\"check\":false},\"19\":{\"check\":false},\"20\":{\"check\":true},\"21\":{\"check\":false},\"22\":{\"check\":false},\"23\":{\"check\":false},\"24\":{\"check\":false},\"25\":{\"check\":false},\"26\":{\"check\":true},\"27\":{\"check\":true},\"28\":{\"check\":false},\"29\":{\"check\":true},\"30\":{\"check\":false},\"31\":{\"check\":false},\"32\":{\"check\":false},\"33\":{\"check\":true},\"34\":{\"check\":true},\"35\":{\"check\":true},\"36\":{\"check\":false},\"37\":{\"check\":false},\"38\":{\"check\":false},\"39\":{\"check\":true},\"40\":{\"check\":true},\"41\":{\"check\":true},\"42\":{\"check\":true},\"43\":{\"check\":true},\"44\":{\"check\":false},\"45\":{\"check\":false},\"46\":{\"check\":false},\"47\":{\"check\":false},\"48\":{\"check\":false},\"49\":{\"check\":false},\"50\":{\"check\":true},\"51\":{\"check\":false},\"52\":{\"check\":false},\"53\":{\"check\":true},\"54\":{\"check\":false},\"55\":{\"check\":false},\"56\":{\"check\":false},\"57\":{\"check\":false},\"58\":{\"check\":false},\"59\":{\"check\":true},\"60\":{\"check\":false},\"61\":{\"check\":false},\"62\":{\"check\":false},\"63\":{\"check\":false},\"64\":{\"check\":true},\"65\":{\"check\":true},\"66\":{\"check\":true},\"67\":{\"check\":false},\"68\":{\"check\":false},\"69\":{\"check\":false},\"70\":{\"check\":false},\"71\":{\"check\":true},\"72\":{\"check\":false},\"73\":{\"check\":false},\"74\":{\"check\":true},\"75\":{\"check\":false},\"76\":{\"check\":false},\"77\":{\"check\":true},\"78\":{\"check\":true},\"79\":{\"check\":false},\"80\":{\"check\":false},\"81\":{\"check\":false},\"82\":{\"check\":false},\"83\":{\"check\":false},\"84\":{\"check\":true},\"85\":{\"check\":false},\"86\":{\"check\":false},\"87\":{\"check\":false},\"88\":{\"check\":false},\"89\":{\"check\":false},\"90\":{\"check\":false},\"91\":{\"check\":false},\"92\":{\"check\":false},\"93\":{\"check\":false},\"94\":{\"check\":true},\"95\":{\"check\":false},\"96\":{\"check\":true},\"97\":{\"check\":false},\"98\":{\"check\":false},\"99\":{\"check\":true},\"100\":{\"check\":false},\"101\":{\"check\":false}}}",
         A2024SPA: "{\"navigation\":15,\"userdata\":{\"1\":{\"check\":true},\"2\":{\"check\":true},\"3\":{\"check\":true},\"4\":{\"check\":true},\"5\":{\"check\":true},\"6\":{\"check\":true},\"7\":{\"check\":false},\"8\":{\"check\":false},\"9\":{\"check\":true},\"10\":{\"check\":false},\"11\":{\"check\":true},\"12\":{\"check\":false},\"13\":{\"check\":false},\"14\":{\"check\":true},\"15\":{\"check\":true},\"16\":{\"check\":false},\"17\":{\"check\":true},\"18\":{\"check\":true},\"19\":{\"check\":false},\"20\":{\"check\":true},\"21\":{\"check\":true},\"22\":{\"check\":true},\"23\":{\"check\":true},\"24\":{\"check\":false},\"25\":{\"check\":true},\"26\":{\"check\":false},\"27\":{\"check\":false},\"28\":{\"check\":false},\"29\":{\"check\":false},\"30\":{\"check\":true},\"31\":{\"check\":false},\"32\":{\"check\":false},\"33\":{\"check\":true},\"34\":{\"check\":true},\"35\":{\"check\":false},\"36\":{\"check\":false},\"37\":{\"check\":true},\"38\":{\"check\":false},\"39\":{\"check\":true},\"40\":{\"check\":true},\"41\":{\"check\":true},\"42\":{\"check\":true},\"43\":{\"check\":false},\"44\":{\"check\":true},\"45\":{\"check\":true},\"46\":{\"check\":true},\"47\":{\"check\":true},\"48\":{\"check\":true},\"49\":{\"check\":true},\"50\":{\"check\":false},\"51\":{\"check\":true},\"52\":{\"check\":true},\"53\":{\"check\":false},\"54\":{\"check\":true},\"55\":{\"check\":true},\"56\":{\"check\":true},\"57\":{\"check\":false},\"58\":{\"check\":false},\"59\":{\"check\":false},\"60\":{\"check\":true},\"61\":{\"check\":true},\"62\":{\"check\":true},\"63\":{\"check\":false},\"64\":{\"check\":false},\"65\":{\"check\":true},\"66\":{\"check\":true},\"67\":{\"check\":true},\"68\":{\"check\":false},\"69\":{\"check\":true},\"70\":{\"check\":false},\"71\":{\"check\":false},\"72\":{\"check\":false},\"73\":{\"check\":false},\"74\":{\"check\":true},\"75\":{\"check\":true},\"76\":{\"check\":false},\"77\":{\"check\":false},\"78\":{\"check\":false},\"79\":{\"check\":true},\"80\":{\"check\":false},\"81\":{\"check\":false},\"82\":{\"check\":true},\"83\":{\"check\":false},\"84\":{\"check\":false},\"85\":{\"check\":true},\"86\":{\"check\":false},\"87\":{\"check\":true},\"88\":{\"check\":true},\"89\":{\"check\":true},\"90\":{\"check\":true},\"91\":{\"check\":true},\"92\":{\"check\":true},\"93\":{\"check\":true},\"94\":{\"check\":false},\"95\":{\"check\":true},\"96\":{\"check\":false},\"97\":{\"check\":false},\"98\":{\"check\":false},\"99\":{\"check\":false},\"100\":{\"check\":true},\"101\":{\"check\":false}}}",
         A2024SA: "{\"navigation\":15,\"userdata\":{\"1\":{\"check\":true},\"2\":{\"check\":true},\"3\":{\"check\":true},\"4\":{\"check\":true},\"5\":{\"check\":true},\"6\":{\"check\":false},\"7\":{\"check\":false},\"8\":{\"check\":true},\"9\":{\"check\":true},\"10\":{\"check\":false},\"11\":{\"check\":false},\"12\":{\"check\":true},\"13\":{\"check\":false},\"14\":{\"check\":true},\"15\":{\"check\":true},\"16\":{\"check\":true},\"17\":{\"check\":true},\"18\":{\"check\":true},\"19\":{\"check\":false},\"20\":{\"check\":true},\"21\":{\"check\":true},\"22\":{\"check\":true},\"23\":{\"check\":true},\"24\":{\"check\":true},\"25\":{\"check\":false},\"26\":{\"check\":false},\"27\":{\"check\":false},\"28\":{\"check\":true},\"29\":{\"check\":false},\"30\":{\"check\":false},\"31\":{\"check\":true},\"32\":{\"check\":false},\"33\":{\"check\":true},\"34\":{\"check\":false},\"35\":{\"check\":false},\"36\":{\"check\":false},\"37\":{\"check\":false},\"38\":{\"check\":true},\"39\":{\"check\":true},\"40\":{\"check\":true},\"41\":{\"check\":true},\"42\":{\"check\":true},\"43\":{\"check\":false},\"44\":{\"check\":true},\"45\":{\"check\":true},\"46\":{\"check\":true},\"47\":{\"check\":true},\"48\":{\"check\":true},\"49\":{\"check\":true},\"50\":{\"check\":false},\"51\":{\"check\":true},\"52\":{\"check\":true},\"53\":{\"check\":false},\"54\":{\"check\":true},\"55\":{\"check\":true},\"56\":{\"check\":true},\"57\":{\"check\":false},\"58\":{\"check\":true},\"59\":{\"check\":false},\"60\":{\"check\":true},\"61\":{\"check\":true},\"62\":{\"check\":true},\"63\":{\"check\":false},\"64\":{\"check\":false},\"65\":{\"check\":true},\"66\":{\"check\":true},\"67\":{\"check\":true},\"68\":{\"check\":false},\"69\":{\"check\":true},\"70\":{\"check\":false},\"71\":{\"check\":false},\"72\":{\"check\":false},\"73\":{\"check\":false},\"74\":{\"check\":true},\"75\":{\"check\":true},\"76\":{\"check\":false},\"77\":{\"check\":false},\"78\":{\"check\":false},\"79\":{\"check\":true},\"80\":{\"check\":false},\"81\":{\"check\":false},\"82\":{\"check\":true},\"83\":{\"check\":false},\"84\":{\"check\":false},\"85\":{\"check\":true},\"86\":{\"check\":false},\"87\":{\"check\":true},\"88\":{\"check\":true},\"89\":{\"check\":true},\"90\":{\"check\":true},\"91\":{\"check\":true},\"92\":{\"check\":true},\"93\":{\"check\":true},\"94\":{\"check\":false},\"95\":{\"check\":true},\"96\":{\"check\":false},\"97\":{\"check\":false},\"98\":{\"check\":false},\"99\":{\"check\":false},\"100\":{\"check\":true},\"101\":{\"check\":false}}}",
-      }
+      },
+      creating: false,
+      finished: false
     }
   },
 
@@ -162,14 +164,19 @@ const app = Vue.createApp({
         }
       }
     },
-    save (state) {
+    save (state, filepdf) {
+
       const message = {
         state: state,
         data: JSON.stringify({
           navigation: this.navigation,
           userdata: JSON.parse(JSON.stringify(this.userdata))
-        })
+        }),
       };
+      if(filepdf){
+        message.pdfBase64 = filepdf
+
+      }
       window.parent.postMessage(message, '*');
     },
     receiveData(event){
@@ -211,7 +218,41 @@ const app = Vue.createApp({
     },
 
     endAcuerdoFamiliar () {
-      console.log('ENDING AND GENERATING!')
+      var _this = this
+      var element = document.getElementById('tuacuerdofamiliar');
+
+      var opt = {
+        margin:       1,
+        filename:     'acuerdo-familiar.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'cm', format: 'letter', orientation: 'portrait' },
+        pagebreak: { avoid: '.primaryObj' }
+      };
+      _this.creating = true
+      // New Promise-based usage:
+      html2pdf()
+      .set(opt)
+      .from(element)
+      .output('datauristring') 
+      .then(function(pdfBase64) {
+
+        _this.save("finished", pdfBase64)
+        _this.finished = true
+
+        setTimeout(()=>{
+          document.querySelector('#finishedlegend').scrollIntoView({
+            behavior: 'smooth', // Smooth scroll effect
+            block: 'start',     // Align the target element to the top of the container
+            inline: 'nearest'   // Horizontal alignment, if necessary
+          });
+        },500)
+
+
+      });
+
+
+
     },
   },
   components: {
@@ -222,6 +263,17 @@ const app = Vue.createApp({
     this.startUserData()
     window.addEventListener('message', (event)=>{
       this.receiveData(event)
+
+
+      /* TESTING */
+      /*
+      setTimeout(()=>{
+        let thedata = JSON.parse(this.loadTemplate['A2024SG'])
+        this.userdata = thedata.userdata
+        this.navigation = 16
+        console.log('testing')
+      }, 1000)
+      */
     }, false);
 
 
