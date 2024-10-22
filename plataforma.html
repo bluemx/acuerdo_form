@@ -60,6 +60,9 @@ function recibirMensaje(event) {
     if (mensaje?.state) {
         
         var datos = mensaje.data;
+        if(mensaje.state=='finished'){
+            var pdf = mensaje?.pdfBase64;
+        }
         
     }
 }
