@@ -172,6 +172,7 @@ const app = Vue.createApp({
           navigation: this.navigation,
           userdata: JSON.parse(JSON.stringify(this.userdata))
         }),
+        siteheight: Math.round(document.getElementsByClassName('acuerdocomp')[0].getBoundingClientRect().height)+100
       };
       if(filepdf){
         message.pdfBase64 = filepdf
@@ -202,6 +203,10 @@ const app = Vue.createApp({
     },
     navigate(event){
       this.navigation = event
+      setTimeout(()=>{
+        this.save('navigated')
+      },200)
+        
     },
     imgname(primaryId, imgId) {
       return 'app/img/op/' + primaryId + '/i' + imgId + '.jpg';
