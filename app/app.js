@@ -172,7 +172,10 @@ const app = Vue.createApp({
           navigation: this.navigation,
           userdata: JSON.parse(JSON.stringify(this.userdata))
         }),
-        siteheight: Math.round(document.getElementsByClassName('acuerdocomp')[0].getBoundingClientRect().height)+100
+        siteheight: Math.round(
+          document.getElementsByClassName('acuerdocomp').length ? document.getElementsByClassName('acuerdocomp')[0].getBoundingClientRect().height :
+          document.getElementById('tuacuerdofamiliar').getBoundingClientRect().height
+        )+100
       };
       if(filepdf){
         message.pdfBase64 = filepdf
