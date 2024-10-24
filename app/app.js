@@ -189,6 +189,7 @@ const app = Vue.createApp({
         this.navigation = thedata.navigation
         setTimeout(()=>{
           this.loading = false
+          this.save('loadedFromData')
         }, 2000)
       }
       if (message?.state=='template') {
@@ -198,6 +199,7 @@ const app = Vue.createApp({
         this.navigation = 1
         setTimeout(()=>{
           this.loading = false
+          this.save('loadedTemplate')
         }, 2000)
       }
     },
@@ -268,8 +270,6 @@ const app = Vue.createApp({
     this.startUserData()
     window.addEventListener('message', (event)=>{
       this.receiveData(event)
-
-
       /* TESTING */
       /*
       setTimeout(()=>{
@@ -283,7 +283,9 @@ const app = Vue.createApp({
 
 
     new SimpleBar(document.getElementsByTagName('main')[0], { autoHide: false });
-
+    setTimeout(()=>{
+      this.save('ready')
+    }, 200)
 
   }
 });
