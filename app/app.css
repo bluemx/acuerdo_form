@@ -7,6 +7,9 @@ body {
 .dfgradient{
   background: linear-gradient(to bottom, #FCC600, #EF8E33, #E86432, #E95364);
 }
+.dfgradientblue{
+  background: linear-gradient(to right, #2B82CC, #51C9F3);
+}
 .dfgradienthover:hover{
   background: linear-gradient(to right, #2B82CC, #51C9F3);
 

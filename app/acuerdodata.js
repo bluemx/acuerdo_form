@@ -285,6 +285,7 @@ let dataAcuerdoOptions = [
     id: 11,
     texto:
       "Los teléfonos o dispositivos digitales quedan fuera de la convivencia familiar y con amistades.",
+    issolo: true
   },
   {
     primary: 2,
@@ -324,6 +325,7 @@ let dataAcuerdoOptions = [
     secondary: 2,
     id: 27,
     texto: "Cuando mi madre, padre o guardián me acompañe.",
+    issolo: true
   },
   {
     primary: 3,
@@ -406,8 +408,8 @@ let dataAcuerdoOptions = [
     primary: 5,
     secondary: 1,
     id: 50,
-    texto:
-      "Por el momento es aceptable que mi hija o hijo no tenga interacciones en línea.",
+    texto: "Por el momento es aceptable que mi hija o hijo no tenga interacciones en línea.",
+    issolo: true
   },
 
   {
@@ -430,6 +432,7 @@ let dataAcuerdoOptions = [
     id: 53,
     texto:
       "Por el momento es aceptable que no comparta contenido donde aparezcan otras personas además de mí.",
+      issolo:true
   },
 
   {
@@ -468,6 +471,7 @@ let dataAcuerdoOptions = [
     secondary: 1,
     id: 59,
     texto: "Por el momento, es aceptable que no tome fotos y videos.",
+    issolo:true
   },
 
   {
@@ -504,6 +508,7 @@ let dataAcuerdoOptions = [
     id: 64,
     texto:
       "Por el momento, es aceptable que no comparta fotos, videos, llamadas y mensajes con nadie.",
+      issolo:true
   },
 
   {
@@ -555,6 +560,7 @@ let dataAcuerdoOptions = [
     id: 71,
     texto:
       "Por el momento, es aceptable que mi madre, padre o guardián sean quienes cree mis contraseñas y manejen mis cuentas.",
+      issolo:true
   },
 
   {
@@ -575,6 +581,7 @@ let dataAcuerdoOptions = [
     secondary: 1,
     id: 74,
     texto: "Por el momento, es aceptable que no me conecte a un wifi público.",
+    issolo:true
   },
 
   {
@@ -597,6 +604,7 @@ let dataAcuerdoOptions = [
     id: 77,
     texto:
       "Es aceptable que mi madre, padre o guardián sea el responsable del cuidado y mantenimiento de mi dispositivo.",
+      issolo: true
   },
   { primary: 11, secondary: 2, id: 78, texto: "Mes." },
   { primary: 11, secondary: 2, id: 79, texto: "3 meses." },
@@ -629,6 +637,7 @@ let dataAcuerdoOptions = [
     id: 84,
     texto:
       "Es aceptable que por el momento mi madre, padre o guardián autorice la descarga y compra de aplicaciones, plataformas o contenido digital.",
+      issolo: true
   },
 
   {
@@ -698,6 +707,7 @@ let dataAcuerdoOptions = [
     secondary: 1,
     id: 94,
     texto: "Por el momento, es aceptable que no tenga redes sociales.",
+    issolo: true
   },
 
   {
@@ -713,6 +723,7 @@ let dataAcuerdoOptions = [
     id: 96,
     texto:
       "Por el momento, es aceptable que no comparta información personal en sitios web o aplicaciones.",
+      issolo: true
   },
 
   {
@@ -747,6 +758,7 @@ let dataAcuerdoOptions = [
     primary: 15,
     secondary: 1,
     id: 101,
-    texto: "Por el momento es aceptable que no navegue en ningún sitio web.",
+    texto: "Por el momento, es aceptable que no navegue en ningún sitio web.",
+    issolo:true
   },
 ];
