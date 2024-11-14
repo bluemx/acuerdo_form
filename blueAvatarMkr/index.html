@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Avatar Mkr</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.2.4/svg.min.js" integrity="sha512-ovlWyhrYXr3HEkGJI5YPXIFYIbHEKs2yfemKVVIIQe9U74tXyTuVdzMlvZlw/0X5lnIDRgtVlckrkeuCrDpq4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/vue@3.2.0/dist/vue.global.js"></script>
+    <style>
+        svg{max-width: 100%;}
+    </style>
+</head>
+<body class="h-full">
+    <div id="app" class="bg-slate-200 w-screen h-screen flex justify-center flex-col items-center">
+        <div id="appsvg" class="bg-white rounded-xl overflow-hidden w-[400px] max-w-full aspect-square"></div>
+        <div  v-if="activeSection" class="px-2 mt-1 w-full max-w-sm">
+            <!-- Menú de botones -->
+            <div class="bg-slate-600 p-2   w-full  text-[#d06064] grid grid-cols-6 text-center gap-2">
+                <button v-for="(section, index) in sections" :key="index"
+                    :class="['p-2 rounded flex justify-center items-center', { 'bg-orange-200': activeSection === section, 'bg-slate-100': activeSection !== section }]"
+                    @click="activeSection = section">
+                    <iconify-icon :icon="section.icon" style="color: #d06064; font-size: 32px"></iconify-icon>
+                </button>
+            </div>
+            
+            <!-- Contenido dinámico según la sección activa -->
+            <div class="bg-slate-600 p-4 mt-1 rounded-b-2xl w-full  text-gray-700">
+                <div class="grid grid-cols-5 gap-2">
+                    <div v-if="activeSection.id==1" v-for="(item,index) in items.hairF" class="rounded-xl bg-white cursor-pointer hover:opacity-50 relative"  @click="changeAvatar('hbf',index)">
+                        <div v-html="item" class="relative z-10"></div>
+                        <div v-html="items.hairB[index]" class="absolute top-0 left-0 w-full z-0 opacity-90"></div>
+                    </div>
+                    <div v-if="activeSection.id==2" v-for="(item,index) in items.head"  class="rounded-xl bg-white cursor-pointer hover:opacity-50"  @click="changeAvatar('h',index)">
+                        <div v-html="item"></div>
+                    </div>
+                    <div v-if="activeSection.id==3" v-for="(item,index) in items.eyes"  class="rounded-xl bg-white cursor-pointer hover:opacity-50"  @click="changeAvatar('e',index)">
+                        <div v-html="item"></div>
+                    </div>
+                    <div v-if="activeSection.id==4" v-for="(item,index) in items.eyebrows"  class="rounded-xl bg-white cursor-pointer hover:opacity-50"  @click="changeAvatar('eb',index)">
+                        <div v-html="item"></div>
+                    </div>
+                    <div v-if="activeSection.id==5" v-for="(item,index) in items.mouth"  class="rounded-xl bg-white cursor-pointer hover:opacity-50"  @click="changeAvatar('m',index)">
+                        <div v-html="item"></div>
+                    </div>
+                    <div v-if="activeSection.id==6" v-for="(item,index) in items.body"  class="rounded-xl bg-white cursor-pointer hover:opacity-50"  @click="changeAvatar('b',index)">
+                        <div v-html="item"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="avatars.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+
+</body>
+</html>
