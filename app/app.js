@@ -213,8 +213,9 @@ const app = Vue.createApp({
           userdata: JSON.parse(JSON.stringify(this.userdata))
         }),
         siteheight: Math.round(
-          document.getElementsByClassName('acuerdocomp').length ? document.getElementsByClassName('acuerdocomp')[0].getBoundingClientRect().height :
-          document.getElementById('tuacuerdofamiliar').getBoundingClientRect().height
+          document.getElementsByTagName('main')[0].getBoundingClientRect().height
+          //document.getElementsByClassName('acuerdocomp').length ? document.getElementsByClassName('acuerdocomp')[0].getBoundingClientRect().height :
+          //document.getElementById('tuacuerdofamiliar').getBoundingClientRect().height
         )+100
       };
       if(filepdf){
