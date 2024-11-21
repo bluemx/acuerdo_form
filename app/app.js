@@ -213,9 +213,7 @@ const app = Vue.createApp({
           userdata: JSON.parse(JSON.stringify(this.userdata))
         }),
         siteheight: Math.round(
-          document.getElementsByTagName('main')[0].getBoundingClientRect().height
-          //document.getElementsByClassName('acuerdocomp').length ? document.getElementsByClassName('acuerdocomp')[0].getBoundingClientRect().height :
-          //document.getElementById('tuacuerdofamiliar').getBoundingClientRect().height
+          document.getElementById('mainWrapperContent').getBoundingClientRect().height
         )+100
       };
       if(filepdf){
@@ -231,7 +229,7 @@ const app = Vue.createApp({
       const { data: message } = event;
       if (message?.state=='load') {
         this.loading = true
-        if(message.data){
+        if(message?.data){
           let thedata = JSON.parse(message.data)
           this.userdata = thedata.userdata
           this.navigation = thedata.navigation
@@ -249,7 +247,7 @@ const app = Vue.createApp({
       }
       if (message?.state=='template') {
         this.loading = true
-        if(message.id){
+        if(message?.id){
           let thedata = JSON.parse(this.loadTemplate[message.id])
           this.userdata = thedata.userdata
         }
