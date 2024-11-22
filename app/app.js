@@ -214,7 +214,7 @@ const app = Vue.createApp({
         }),
         siteheight: Math.round(
           document.getElementById('mainWrapperContent').getBoundingClientRect().height
-        )+100
+        )+250
       };
       if(filepdf){
         message.pdfBase64 = filepdf
